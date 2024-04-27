@@ -18,7 +18,7 @@ class Calculator:
         if y == 0:
             raise ZeroDivisionError('Impossivel dividir por 0')
         return x / y
-    def factorial(n):
+    def factorial(self,n):
         if( n < 0): 
             raise TypeError("Argumento do fatorial deve ser maior ou igual a 0")
         if n == 0:
@@ -26,7 +26,7 @@ class Calculator:
         else:
             return n * Calculator.factorial(n - 1)
 
-    def sin(x, terms=10):
+    def sin(self,x, terms=10):
         """
         Calcula o seno com uma serie de taylor
     Args:
@@ -39,7 +39,7 @@ class Calculator:
             sine += sign * (x ** (2 * i + 1)) / Calculator.factorial(2 * i + 1)
         return sine
 
-    def cos(x, terms=10):
+    def cos(self,x, terms=10):
         """
         Calcula o cosseno com uma serie de taylor
     Args:
@@ -54,7 +54,7 @@ class Calculator:
             result += (sign * numerator) / denominator
         return result
 
-    def tan(x, terms=10):
+    def tan(self,x, terms=10):
         """
         Calcula a tangente usando tg = sin/cos.
     Args:
@@ -66,15 +66,15 @@ class Calculator:
     def degreesToRadians(degrees):
         return math.radians(degrees)
 
-calc = Calculator()
-print("Addition:", calc.add(5, 3))
-print("Subtraction:", calc.subtract(5, 3))
-print("Multiplication:", calc.multiply(5, 3))
-print("Division:", calc.divide(9, 1))
+# calc = Calculator()
+# print("Addition:", calc.add(5, 3))
+# print("Subtraction:", calc.subtract(5, 3))
+# print("Multiplication:", calc.multiply(5, 3))
+# print("Division:", calc.divide(9, 1))
 
-degree = -60
-radians = math.radians(degree) 
-print("sin(" + str(degree) +"°):", format(Calculator.sin(radians),".4f"))
-print("cos(" + str(degree) +"°):", format(Calculator.cos(radians),".4f"))
-print("tan(" + str(degree) +"°):", format(Calculator.tan(radians),".4f"))
+# degree = -60
+# radians = math.radians(degree) 
+# print("sin(" + str(degree) +"°):", format(Calculator.sin(radians),".4f"))
+# print("cos(" + str(degree) +"°):", format(Calculator.cos(radians),".4f"))
+# print("tan(" + str(degree) +"°):", format(Calculator.tan(radians),".4f"))
 
