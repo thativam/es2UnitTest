@@ -4,7 +4,7 @@
 
 # Utilizei coverage (pip install coverage)
 
-## Para utilziar coverage depende da sua versão em python[https://coverage.readthedocs.io/en/latest/install.html]
+## Para utilziar coverage depende da sua versão em [python](https://coverage.readthedocs.io/en/latest/install.html)
 
 - Opções para rodar
   - coverage run -m testFramework testCaseFilePath
@@ -20,8 +20,8 @@
 
 ## Usando a ferramenta coverage
 
-    - Resultado foi de 83% de codigo coberto pelos testes.
+- Resultado foi de 83% de codigo coberto pelos testes.
 
 ## Proximos passos sera realizar mudanças pontuais no teste para que passe em todos os testes.
 
-    - Apos mudanças o codigo agora cobre 100% da classe Calculator alem de passar em todos os testes.
+- Apos mudanças o codigo agora cobre 100% da classe Calculator alem de passar em todos os testes.
