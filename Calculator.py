@@ -24,7 +24,7 @@ class Calculator:
         if n == 0:
             return 1
         else:
-            return n * Calculator.factorial(n - 1)
+            return n * self.factorial(n - 1)
 
     def sin(self,x, terms=10):
         """
@@ -36,7 +36,7 @@ class Calculator:
         sine = 0
         for i in range(terms):
             sign = (-1) ** i
-            sine += sign * (x ** (2 * i + 1)) / Calculator.factorial(2 * i + 1)
+            sine += sign * (x ** (2 * i + 1)) / self.factorial(2 * i + 1)
         return sine
 
     def cos(self,x, terms=10):
@@ -50,7 +50,7 @@ class Calculator:
         for n in range(terms):
             sign = (-1) ** n
             numerator = x ** (2 * n)
-            denominator = Calculator.factorial(2 * n )
+            denominator = self.factorial(2 * n )
             result += (sign * numerator) / denominator
         return result
 
@@ -61,12 +61,12 @@ class Calculator:
         x (float): Angulo em radianos.
         terms (int): numero de termos a ser usado na serie de Taylor
     """
-        return Calculator.sin(x, terms) / Calculator.cos(x, terms)
+        return self.sin(x, terms) / self.cos(x, terms)
 
-    def degreesToRadians(degrees):
+    def degreesToRadians(self,degrees):
         return math.radians(degrees)
 
-# calc = Calculator()
+calc = Calculator()
 # print("Addition:", calc.add(5, 3))
 # print("Subtraction:", calc.subtract(5, 3))
 # print("Multiplication:", calc.multiply(5, 3))
@@ -75,6 +75,6 @@ class Calculator:
 # degree = -60
 # radians = math.radians(degree) 
 # print("sin(" + str(degree) +"°):", format(Calculator.sin(radians),".4f"))
-# print("cos(" + str(degree) +"°):", format(Calculator.cos(radians),".4f"))
+#print("cos(" + str(90) +"°):", format(calc.cos(math.pi/2),".4f"))
 # print("tan(" + str(degree) +"°):", format(Calculator.tan(radians),".4f"))
 

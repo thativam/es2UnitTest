@@ -5,6 +5,10 @@ Calculadora é um projeto simples apenas para demonstrar o uso de ferramentas de
 # Contribuindo
 
 Caso tenha alguma função em mente, fique a vontade para adicionar a classe principal, comente caso veja necessidade.
+Apos criar uma nova função é necessario rodar os testes novamentes
+
+- Realizar novamente teste de cobertura
+- Rodar os testes criando novas funções, caso utilizou IA, utilizar a mesma IA para gerar novos casos de teste.
 
 # Testes
 

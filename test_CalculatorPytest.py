@@ -40,7 +40,7 @@ class TestCalculatorChatgpt4:
         assert abs(calc.sin(math.pi) - 0) < 0.0001
 
     def test_cos(self, calc):
-        assert calc.cos(math.pi/2) == 0
+        assert calc.cos(math.pi/2) == pytest.approx(0, abs=1e-9)
         assert calc.cos(0) == 1
         assert abs(calc.cos(math.pi) + 1) < 0.0001
 
@@ -49,5 +49,5 @@ class TestCalculatorChatgpt4:
         assert abs(calc.tan(math.pi/4) - 1) < 0.0001
 
     def test_degrees_to_radians(self, calc):
-        assert calc.degrees_to_radians(180) == math.pi
-        assert calc.degrees_to_radians(360) == 2 * math.pi
+        assert calc.degreesToRadians(180) == math.pi
+        assert calc.degreesToRadians(360) == 2 * math.pi
