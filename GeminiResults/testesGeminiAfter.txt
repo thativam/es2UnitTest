@@ -1,0 +1,6 @@
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+Calculator.py                       50      4    92%
+test_CalculatorPytestGemini.py      45      0   100%
+----------------------------------------------------
+TOTAL                               95      4    96%

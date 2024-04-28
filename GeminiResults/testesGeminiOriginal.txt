@@ -1,0 +1,20 @@
+Name                                         Stmts   Miss  Cover
+----------------------------------------------------------------
+es2UnitTest\Calculator.py                       48      4    92%
+es2UnitTest\test_CalculatorPytestGemini.py      45      1    98%
+----------------------------------------------------------------
+TOTAL                                           93      5    95%
+_____________________________________________________ CalculatorTestGemini.test_tan ______________________________________________________ 
+
+self = <test_CalculatorPytestGemini.CalculatorTestGemini testMethod=test_tan>
+
+    def test_tan(self):
+        # Test with radians (consider edge cases like pi/2)
+        self.assertAlmostEqual(self.calc.tan(math.radians(45)), 1.0, places=2)
+>       self.assertRaises(ZeroDivisionError, self.calc.tan, math.radians(90))
+E       AssertionError: ZeroDivisionError not raised by tan
+
+test_CalculatorPytestGemini.py:62: AssertionError
+======================================================== short test summary info ========================================================= 
+FAILED test_CalculatorPytestGemini.py::CalculatorTestGemini::test_tan - AssertionError: ZeroDivisionError not raised by tan
+====================================================== 1 failed, 8 passed in 0.35s ======================================================= 

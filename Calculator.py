@@ -61,6 +61,9 @@ class Calculator:
         x (float): Angulo em radianos.
         terms (int): numero de termos a ser usado na serie de Taylor
     """
+        if (x == 90 or x == math.radians(90)):
+            raise ZeroDivisionError('Impossivel dividir por 0')
+        
         cosine = self.cos(x,terms)
         if(cosine == 0):
             raise ZeroDivisionError('Impossivel dividir por 0')
