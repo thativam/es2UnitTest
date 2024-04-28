@@ -4,3 +4,12 @@ Calculator.py                       50      4    92%
 test_CalculatorPytestGemini.py      45      0   100%
 ----------------------------------------------------
 TOTAL                               95      4    96%
+PS C:\Users\giova\OneDrive\Área de Trabalho\2024\ES2\Trab 1\es2UnitTEst> coverage run -m pytest C:\Users\giova\OneDrive\"Área de Trabalho"\2024\ES2\"Trab 1"\es2UnitTest\test_CalculatorPytestGemini.py
+========================================================== test session starts ===========================================================
+platform win32 -- Python 3.11.0, pytest-8.1.2, pluggy-1.5.0
+rootdir: C:\Users\giova\OneDrive\Área de Trabalho\2024\ES2\Trab 1\es2UnitTEst
+collected 9 items
+
+test_CalculatorPytestGemini.py .........                                                                                            [100%]
+
+=========================================================== 9 passed in 0.09s ============================================================ 
