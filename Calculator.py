@@ -61,10 +61,26 @@ class Calculator:
         x (float): Angulo em radianos.
         terms (int): numero de termos a ser usado na serie de Taylor
     """
-        return self.sin(x, terms) / self.cos(x, terms)
+        cosine = self.cos(x,terms)
+        if(cosine == 0):
+            raise ZeroDivisionError('Impossivel dividir por 0')
+        else:
+            return self.sin(x, terms) / cosine
 
     def degreesToRadians(self,degrees):
         return math.radians(degrees)
+        
+    def exp(self, x, y):
+        return (x**y)
+    
+    def square(self, x):
+        return (math.sqrt(x))
+    
+    def ln(self, x):
+        return(math.log(x))
+    
+    def log(self, x, base):
+        return(math.log(x, base))
 
 calc = Calculator()
 # print("Addition:", calc.add(5, 3))
@@ -77,4 +93,4 @@ calc = Calculator()
 # print("sin(" + str(degree) +"°):", format(Calculator.sin(radians),".4f"))
 #print("cos(" + str(90) +"°):", format(calc.cos(math.pi/2),".4f"))
 # print("tan(" + str(degree) +"°):", format(Calculator.tan(radians),".4f"))
-
+#print(calc.raiz(25))
