@@ -20,16 +20,16 @@ class TesteClass(unittest.TestCase):
         self.assertEqual(39916800, Calc.factorial(11), "Fatorial esta errada")
     def testeSin(self):
         Calc  = Calculator()
-        self.assertEqual(0.49999999999999994, Calc.sin(0.5235987755982988), "Calc esta errada")
+        self.assertEqual(0.49999999999999994, Calc.sin(math.pi/6), "Seno esta errado")
     def testeCos(self):
         Calc  = Calculator()
-        self.assertEqual(0.5000000000000001, Calc.cos(1.0471975511965976), "Calc esta errada")
+        self.assertEqual(0.5000000000000001, Calc.cos(math.pi/3), "Cosseno esta errado")
     def testeTan(self):
         Calc  = Calculator()
-        self.assertEqual(1, Calc.tan(0.7853981633974483), "Calc esta errada")
+        self.assertEqual(1, Calc.tan(math.pi/4), "Tangente esta errada")
     def testeRad(self):
         Calc  = Calculator()
-        self.assertEqual(0.5235987755982988, Calc.degreesToRadians(30), "Calc esta errada")
+        self.assertEqual(0.5235987755982988, Calc.degreesToRadians(30), "Graus para radianos esta errado")
     
 
 if __name__ == "__main__":
