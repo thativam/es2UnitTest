@@ -66,15 +66,67 @@ class Calculator:
     def degreesToRadians(self,degrees):
         return math.radians(degrees)
 
-calc = Calculator()
-# print("Addition:", calc.add(5, 3))
-# print("Subtraction:", calc.subtract(5, 3))
-# print("Multiplication:", calc.multiply(5, 3))
-# print("Division:", calc.divide(9, 1))
+def main():
+    calc = Calculator()
+    while True:
+        print("Escolha a operação:")
+        print("1 - Soma")
+        print("2 - Subtração")
+        print("3 - Multiplicação")
+        print("4 - Divisão")
+        print("5 - Seno")
+        print("6 - Cosseno")
+        print("7 - Tangente")
+        print("8 - Fatorial")
+        print("9 - Converter graus para radianos")
+        print("0 - Sair")
 
-# degree = -60
-# radians = math.radians(degree) 
-# print("sin(" + str(degree) +"°):", format(Calculator.sin(radians),".4f"))
-#print("cos(" + str(90) +"°):", format(calc.cos(math.pi/2),".4f"))
-# print("tan(" + str(degree) +"°):", format(Calculator.tan(radians),".4f"))
+        choice = input("Digite o número da operação desejada: ")
+
+        if choice == '0':
+            print("Encerrando a calculadora.")
+            break
+
+        if choice in ['1', '2', '3', '4']:
+            x = float(input("Digite o primeiro número: "))
+            y = float(input("Digite o segundo número: "))
+
+        if choice == '1':
+            print(f"Resultado: {calc.add(x, y)}")
+        elif choice == '2':
+            print(f"Resultado: {calc.subtract(x, y)}")
+        elif choice == '3':
+            print(f"Resultado: {calc.multiply(x, y)}")
+        elif choice == '4':
+            try:
+                print(f"Resultado: {calc.divide(x, y)}")
+            except ZeroDivisionError as e:
+                print(e)
+        elif choice == '5':
+            angle = float(input("Digite o ângulo em graus: "))
+            radians = calc.degreesToRadians(angle)
+            print(f"Seno({angle}°): {calc.sin(radians)}")
+        elif choice == '6':
+            angle = float(input("Digite o ângulo em graus: "))
+            radians = calc.degreesToRadians(angle)
+            print(f"Cosseno({angle}°): {calc.cos(radians)}")
+        elif choice == '7':
+            angle = float(input("Digite o ângulo em graus: "))
+            radians = calc.degreesToRadians(angle)
+            print(f"Tangente({angle}°): {calc.tan(radians)}")
+        elif choice == '8':
+            n = int(input("Digite um número inteiro não negativo: "))
+            try:
+                print(f"Fatorial({n}): {calc.factorial(n)}")
+            except TypeError as e:
+                print(e)
+        elif choice == '9':
+            degrees = float(input("Digite o ângulo em graus: "))
+            print(f"{degrees} graus em radianos: {calc.degreesToRadians(degrees)}")
+        else:
+            print("Escolha inválida. Tente novamente.")
+
+
+if __name__ == "__main__":
+    main()
 
